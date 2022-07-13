@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --light-cyan: hsl(179, 48%, 52%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.attribution {
+    font-size: 11px; text-align: center;
+    color: black;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body {
+    background-color: var(--light-gray);
+    font-family: "Karla", sans-serif;
+    font-size: 1rem;
+    padding: 1.25rem;
+}
+
+p, li {
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+}
+
+footer {
+    padding: 20px;
+}
+
+.container {
+    background-color: var(--white);
+    border-radius: .5rem;
+}
+
+.btn {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--bright-yellow);
+    border: 1px solid var(--bright-yellow);
+    border-radius: 5px;
+    padding: 1rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.container > article:first-child {
+    padding: 2rem;
+}
+
+.container > article:first-child h1 {
+    color: var(--cyan);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.container > article:first-child h3 {
+    color: var(--bright-yellow);
+    margin-bottom: .5rem;
+}
+
+.container > article:first-child p {
+    margin-bottom: 1rem;
+    color: var(--grayish-blue);
+}
+
+.container section {
+    display: flex;
+    flex-direction: column;
+}
+
+.container section article {
+    padding: 2rem;
+}
+
+.container section article:first-child {
+    background-color: var(--cyan);
+}
+
+.container section article:first-child h2, p {
+    color: var(--light-gray);
+    margin-bottom: 1rem;
+}
+
+.container section article:first-child h3 {
+    color: var(--light-gray);
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.container section article:first-child h3 span {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 1rem;
+}
+
+.container section article:last-child {
+    background-color: var(--light-cyan);
+    color: var(--light-gray);
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+}
+
+.container section article:last-child h2 {
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+    .container {
+        width: 700px;
+        margin: auto;
+    }
+    .container > article:first-child h1 {
+        font-size: 2rem;
+    }
+    .container section {
+        flex-direction: row;
+    }
+    .container section article:first-child {
+        flex: 1;
+        border-bottom-left-radius: .5rem;
+    }
+    .container section article:last-child {
+        flex: 1;
+        border-bottom-right-radius: .5rem;
+        border-bottom-left-radius: 0;
+    }
+}
